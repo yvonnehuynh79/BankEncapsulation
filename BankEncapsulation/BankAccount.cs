@@ -1,7 +1,7 @@
 ﻿using System;
 namespace BankEncapsulation
 {
-	public class BankAccount
+	internal class BankAccount
 	{
 		public BankAccount()
 		{
@@ -13,10 +13,19 @@ namespace BankEncapsulation
 			balance += amount;
 		}
 
-		public void GetBalance()
+        public void Withdraw(double amount)
+        {
+            balance -= amount;
+
+        }
+
+        public double GetBalance()
 		{
-			Console.WriteLine($" the balanece is: {balance}");
+			return balance;
 		}
+
+		
+
 	}
 }
 
